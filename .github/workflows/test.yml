@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Install Dependencies
-        run: npm ci --package-lock-only
+        run: npm ci --package-lock-only --include=dev
       - name: Unit Tests
         run: npm run test:ci
       - name: E2E Tests
