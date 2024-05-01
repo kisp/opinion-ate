@@ -1,7 +1,9 @@
+import RestaurantScreen from './components/RestaurantScreen.jsx'
+
 function App() {
   return (
     <div>
-      <h1>Hello React</h1>
+      <RestaurantScreen />
     </div>
   )
 }
