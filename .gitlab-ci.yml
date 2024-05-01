@@ -1,5 +1,5 @@
 test:
-  image: node:21.7.3
+  image: cypress/base:20.12.2
   script:
     - npm ci
     - npm run test:ci
