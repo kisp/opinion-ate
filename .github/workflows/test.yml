@@ -12,8 +12,8 @@ jobs:
         run: npm ci
       - name: Unit Tests
         run: npm run test:ci
-      # - name: E2E Tests
-      #   uses: cypress-io/github-action@v4
-      #   with:
-      #     start: npm run dev
-      #     wait-on: 'http://localhost:5173'
+      - name: E2E Tests
+        uses: cypress-io/github-action@v6
+        with:
+          start: npm run dev
+          wait-on: 'http://localhost:5173'
