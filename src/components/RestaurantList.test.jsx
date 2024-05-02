@@ -1,5 +1,5 @@
 import {vi} from 'vitest'
-import {RestaurantListPure as RestaurantList} from './RestaurantList.jsx'
+import {RestaurantList} from './RestaurantList.jsx'
 import {render, screen} from '@testing-library/react'
 
 describe('RestaurantList', () => {
