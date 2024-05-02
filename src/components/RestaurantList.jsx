@@ -1,8 +1,9 @@
 import {useEffect} from 'react'
 import {connect} from 'react-redux'
 import {loadRestaurants} from '../store/restaurants/actions'
+import PropTypes from 'prop-types'
 
-export function RestaurantList({loadRestaurants, restaurants}) {
+export function RestaurantListPure({loadRestaurants, restaurants}) {
   useEffect(() => {
     loadRestaurants()
   }, [loadRestaurants])
@@ -16,10 +17,19 @@ export function RestaurantList({loadRestaurants, restaurants}) {
   )
 }
 
+RestaurantListPure.propTypes = {
+  loadRestaurants: PropTypes.func,
+  restaurants: PropTypes.array,
+}
+
 const mapStateToProps = state => ({
   restaurants: state.restaurants.records,
 })
 
 const mapDispatchToProps = {loadRestaurants}
 
-export default connect(mapStateToProps, mapDispatchToProps)(RestaurantList)
+const RestaurantList = connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(RestaurantListPure)
+export default RestaurantList

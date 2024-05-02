@@ -1,5 +1,5 @@
 import {applyMiddleware, createStore} from 'redux'
-import {thunk, withExtraArgument} from 'redux-thunk'
+import {withExtraArgument} from 'redux-thunk'
 import restaurantsReducer from './restaurants/reducers.js'
 import {loadRestaurants} from './restaurants/actions.js'
 
