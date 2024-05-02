@@ -1,7 +1,8 @@
-import {createStore, applyMiddleware} from 'redux'
+import {applyMiddleware, createStore} from 'redux'
 import rootReducer from './reducers'
-import {thunk} from 'redux-thunk'
+import {withExtraArgument} from 'redux-thunk'
+import api from '../api.js'
 
-const store = createStore(rootReducer, applyMiddleware(thunk))
+const store = createStore(rootReducer, applyMiddleware(withExtraArgument(api)))
 
 export default store
