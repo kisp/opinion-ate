@@ -21,3 +21,5 @@ jobs:
         run: npm run lint
       - name: build for production
         run: npm run build
+      - name: prettier
+        run: npm run prettier:ci
