@@ -4,4 +4,7 @@ test:
     - npm ci
     - npm run test:ci
     - npm run dev &
-    - npx cypress run
+    - npm run cypress:ci
+    - npm run lint
+    - npm run build
+    - npm run prettier:ci

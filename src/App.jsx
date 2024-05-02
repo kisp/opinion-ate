@@ -1,10 +1,12 @@
-import './App.css'
+import {Provider} from 'react-redux'
+import store from './store'
+import RestaurantScreen from './components/RestaurantScreen.jsx'
 
 function App() {
   return (
-    <div>
-      <h1>Hello React</h1>
-    </div>
+    <Provider store={store}>
+      <RestaurantScreen />
+    </Provider>
   )
 }
 
