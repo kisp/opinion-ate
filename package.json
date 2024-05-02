@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "test": "vitest",
     "test:ci": "vitest --run",
-    "cypress": "cypress open"
+    "cypress": "cypress open",
+    "cypress:ci": "cypress run"
   },
   "dependencies": {
     "react": "^18.2.0",
